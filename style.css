@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+}
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    margin: 0 auto;
+    
+}
+.container .row{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(0,0,0,0.8);
+    width: 400px;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    
+}
+.container .row .col{
+    position: relative;
+    margin: 20px 0;
+}
+.container .row .col input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px #fff solid;
+    color: white;
+  
+
+}
+.container .row .col input:focus ~ label,.container .row .col input:valid ~ label{ 
+    top: -20px;
+    font-size: 10px;
+    color: turquoise;
+}
+
+
+.container .row .col label{
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    top: 0;
+    color: #fff;
+    transition: 0.5s;
+
+
+}
+@media(max-width:760px){
+    .container .row{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .container .row .col >  label{
+        font-size: 13px;
+        padding: 10px;
+       
+    }
+    .container .row .col input{
+        padding: 5px;
+    }
+}
+
+button{
+    padding: 8px 16px;
+    background: #03a9f4;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+}
